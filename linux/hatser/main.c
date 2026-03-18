@@ -11,9 +11,8 @@
 
 #define PORT 16834
 
-// THIS FILE IS CURRENTLY WORKING FOR LIVESPLIT ONE
-// YOU CAN COMMENT/UNCOMMENT CODE TO MAKE IT WORK FOR LIVESPLIT
-// ADDITIONALLY, THE ANYMANY AUTOSPLITTER DOES NOT WORK
+// This file currently only works for LiveSplit one.
+// It provides a web server that sends data towards the program.
 
 struct __attribute__((packed)) hat_timer {
     u32 start_magic;
@@ -54,12 +53,6 @@ struct region {
     u64 start;
     u64 end;
 };
-
-enum split_type {
-    SPLIT_NORMAL,
-    SPLIT_ANYMANY,
-    SPLIT_N
-} split_mode;
 
 s32 hat_pid;
 void* timer_ptr; // the address in HatinTimeGame.exe
